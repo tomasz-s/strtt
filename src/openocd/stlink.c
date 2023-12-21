@@ -1160,7 +1160,7 @@ static int stlink_usb_error_check(void *handle)
 			 * This fix allows CDT plugin to visualize memory.
 			 */
 		LOG_DEBUG("STLINK_SWD_AP_FAULT");
-		return ERROR_FAIL;
+		return ERROR_OK;
 	case STLINK_SWD_AP_ERROR:
 		LOG_DEBUG("STLINK_SWD_AP_ERROR");
 		return ERROR_FAIL;
