@@ -11,6 +11,8 @@ Options:
 
 **-tcp** use tcp connection to st-link gdb server (<https://www.st.com/en/development-tools/st-link-server.html>)
 
+**-serial** choose STLink by serial number when multiple ST-Link debuggers connected
+
 # Windows
 
 Folder windows_bin_64 includes windows 64 bit executable. If the program returns immediately try to run it with -v 4 option. Return value (-4) indicates missing stlink drivers available as STSW-LINK009 from st.com.

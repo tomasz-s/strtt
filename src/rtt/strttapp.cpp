@@ -7,6 +7,10 @@
 #include "log.h"
 #include "inputparser.h"
 
+extern "C" {
+#include "adapter.h"
+}
+
 // #define SYSVIEW
 
 #ifdef SYSVIEW
@@ -68,6 +72,13 @@ int main(int argc, char **argv)
 
     log_init();
     debug_level = LOG_LVL_SILENT;
+
+    
+    if (input.cmdOptionExists("-serial"))
+    {
+        std::string opt = input.getCmdOption("-serial");
+        adapter_set_required_serial(opt.c_str());
+    }
 
     if (input.cmdOptionExists("-v"))
     {

@@ -48,6 +48,9 @@ bool adapter_usb_location_equal(uint8_t dev_bus, uint8_t *port_path, size_t path
 /** Retrieves the clock speed of the adapter in kHz. */
 // unsigned int adapter_get_speed_khz(void);
 
+/** Specifies the serial number to use */
+void adapter_set_required_serial(const char *serial);
+
 /** Retrieves the serial number set with command 'adapter serial' */
 const char *adapter_get_required_serial(void);
 
